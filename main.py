@@ -5,12 +5,11 @@ def main():
     # Count every character in lower case
     counted_characters = count_characters(text)
     sorted_list = convert_dict_to_list(counted_characters)
-    print(text)
-    print(f"{word_count} words were found in the document!")
-    print(counted_characters)
     # Sortiert die Liste (mit dictonaries) nach reihenfolge der häufigkeit
-    sorted_list.sort(reverse=True, key="count")
-    print(sorted_list)
+    sorted_list.sort(reverse=True, key=sort_on)
+    # Report
+    print(f"---Begin report of {book_path}---")
+    print(f"{word_count} words found in the document")
 
 
 def get_book_text(path):
