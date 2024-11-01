@@ -10,6 +10,9 @@ def main():
     # Report
     print(f"---Begin report of {book_path}---")
     print(f"{word_count} words found in the document")
+    for c in sorted_list:
+        print(f"The {c['char']} character was found {c['count']} times")
+    print("---End report---")
 
 
 def get_book_text(path):
